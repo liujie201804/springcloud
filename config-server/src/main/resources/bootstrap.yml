@@ -1,0 +1,18 @@
+server:
+  port: 2007
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          search-paths: config
+          uri: https://github.com/liujie201804/cloudconfig.git
+          username: liu109976@163.com
+          password: liujie222
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:1111/eureka

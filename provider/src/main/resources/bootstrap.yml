@@ -1,0 +1,18 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:1111/eureka
+
+spring:
+  application:
+    name: provider
+  cloud:
+    config:
+      label: master
+      discovery:
+        enabled: true
+        service-id: CONFIG-SERVER
+      profile: dev  # 指定配置文件的环境
+
+
+
